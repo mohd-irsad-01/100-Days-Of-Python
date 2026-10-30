@@ -6,8 +6,8 @@ def second_largest(arr):
         if i > largest:
             second = largest
             largest = i
-        elif i != largest:
-            if second is not None or i > largest:
+        elif i < largest:
+            if second is None or i > second:
                 second = i 
     return second
 arr1 = [10, 12, 13, 14, 12, 14, 13, 15, 16, 17, 18, 19, 19]
